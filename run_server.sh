@@ -1,0 +1,1 @@
+set DEBUG=webhelp & node ./bin/www

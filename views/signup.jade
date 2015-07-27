@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class='container-fluid main')
+        include ./topmenu.jade
+        include ./header.jade
+        div(class='row content')
+            div(class='col-md-2')
+            div(class='col-md-8 col-xs-12 search-container')
+                h2(class='')= 'signup'
+                message
+                if message.length > 0
+                    message
+                form(action='/signup', method='post')
+                    input(type='text', name='email', class='form-control bottom-space', placeholder='name')
+                    input(type='password', name='password', class='form-control bottom-space')
+                    input(type='submit', name='submit', class='btn btn-warning btn-lg', value='Singup')
+            div(class='col-md-2')
+                
+

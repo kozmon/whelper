@@ -1,0 +1,159 @@
+/*@import "bootstrap";*/
+
+$darkgrey :  #333333;
+$blue: #003871;
+
+@mixin asap($weight) {
+    font-family: 'Asap';
+    font-weight: $weight;
+}
+
+@mixin roboto-condensed($weight) {
+    font-family: 'Roboto Condensed';
+    font-weight: $weight;
+}
+
+@mixin border-radius ($radius) {
+    @include border-top-radius($radius);
+    @include border-bottom-radius($radius);
+}
+
+/******************************** BASE ********************************/
+
+h1 {
+    @include asap(400);
+    font-style: italic;
+    font-size: 32px;
+    color: $darkgrey;
+}
+
+h2 {
+    @include roboto-condensed(300);
+    font-size: 24px;
+    color: #222222;
+}
+
+h3 {
+    @include roboto-condensed(400);
+    font-size: 17px;
+    color: $darkgrey;
+}
+
+body {
+    @include roboto-condensed(300);
+    font-size: 17px;
+    color: $darkgrey;
+    line-height: 1.4em;
+}
+
+p {
+    @include roboto-condensed(300);
+    font-size: 17px;
+    color: $darkgrey;
+    line-height: 1.4em;
+    a {
+        @include roboto-condensed(400);
+        font-size: 17px;
+        color: $blue;
+    }
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.blue {
+    color: $blue;
+}
+
+h1.alap {
+    background-color: red;
+    color: blue;
+}
+
+body {
+    background-color: #ffdd00;
+}
+
+div.main {
+
+    div.top-menu {
+        background-color: #ee2211;
+        padding: 5px;
+        margin-bottom: 10px;
+        
+        span.menu {
+            a {
+                color: #eeeeee;
+                
+            }
+            
+            &.separator:after {
+                content: " | ";
+                color: #eeeeee;
+            }
+        }
+    }
+
+    div.header-menu {
+        .button {
+            border: 1px solid #ee2211;
+            border-radius: 5px;
+            background-color: #eeeeee;
+            margin: 5px;
+        }
+    }
+    
+    input.bottom-space {
+        margin-bottom: 10px;
+    }
+    
+    div.content {
+        background-image: url('/img/tt2.jpg');
+        background-position: 0 -570px;
+        height: 470px;
+        box-shadow: 0 0 1pt 1pt #554400;
+        border-radius: 5px;
+    }
+
+    div.search-container {
+        margin: 150px 0 0 0;
+        padding: 20px 5% 40px 5%;
+        background-color: #ffffff;
+        box-shadow: 0 0 1pt 1pt #554400;
+        border-radius: 10px;
+        
+        input.search {
+            width: 100%;
+            padding: 0px 20px 0px 20px;
+            font-size: 200%;
+            line-height: 200%;
+            color: #222222;
+            border: 0 #222222 solid;
+/*            box-shadow: 0 0 1pt 1pt #554400;*/
+            border-radius: 10px;
+            outline: 0;
+            background: none;
+             
+            &:focus {
+                background-color: #eeeeee;
+                transition: border linear .2s, box-shadow linear .2s;
+                transition-property: border, box-shadow;
+                transition-duration: 0.2s, 0.2s;
+                transition-timing-function: linear, linear;
+                transition-delay: initial, initial;            
+            }
+        }
+        
+    }
+
+    div.logo-center-container {
+        margin: 10px 0 0 0;
+        
+        div.logo-center {
+            background-image: url('/img/logo-center.png');
+            
+        }
+    }
+
+}
